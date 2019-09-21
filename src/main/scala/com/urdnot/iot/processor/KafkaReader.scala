@@ -1,5 +1,7 @@
 package com.urdnot.iot.processor
 
-class KafkaReader {
-
+object KafkaReader {
+  def main(Args: Array[String]): Unit = {
+    KafkaBeerReader
+  }
 }

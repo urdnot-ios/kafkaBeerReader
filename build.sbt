@@ -1,13 +1,13 @@
 import com.typesafe.sbt.packager.docker._
 import sbt.Keys.mappings
 
-
+organization := "com.urdnot.iot.processor"
 name := "kafkaBeerReader"
 version := "0.1"
-scalaVersion := "2.13.1"
+scalaVersion := "2.12.10"
 
 // needed for the fat jar
-mainClass in assembly := Some("com.urdnot.iot.KafkaReader")
+mainClass in (Compile, assembly) := Some("com.urdnot.iot.processor.KafkaReader")
 
 lazy val akkaHttpVersion = "10.1.9"
 lazy val akkaStreamKafkaVersion = "1.0.5"
